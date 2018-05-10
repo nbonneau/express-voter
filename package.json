@@ -1,5 +1,6 @@
 {
     "name": "express-voter",
+    "version": "1.0.2",
     "description": "Add voters to your Express application",
     "repository": {
         "type": "git",
@@ -13,7 +14,6 @@
         "express",
         "middleware"
     ],
-    "version": "1.0.1",
     "author": {
         "email": "nicolas.bonneau.vlb@gmail.com",
         "name": "Nicolas BONNEAU"

@@ -23,12 +23,43 @@ const expressVoter = require('express-voter');
 expressVoter.addVoter({
     roles: ['view', 'edit'],
     supports: function(role, subject) {
+
+        // Check if role is in voter roles
+        if (!this.roles.find((r) => r.toLowerCase() === role.toLowerCase())) {
+            return false;
+        }
+
+        // Do other check, if subject instance of SomeThing for example
         // ...
+
+        return true;
     },
-    validate: function(role, subjct, user, callback) {
-        // ...
+    validate: function(role, subject, user, callback) {
+        // Validate by role
+        switch(role){
+            case this.roles[0]:
+
+                // ... 
+
+                // Validation OK
+                return callback(null, true);
+        }
+        callback(new Error('this code should not be reached'));
     }
 });
+
+/*
+// Or
+expressVoter.addVoters([
+    {
+        "name": "voter_A"
+        //...
+    },{
+        "name": "voter_B"
+        // ...
+    }
+]);
+*/
 
 // Apply middleware
 app.use(expressVoter());
