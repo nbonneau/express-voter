@@ -1,6 +1,10 @@
 {
     "name": "express-voter",
     "description": "Add voters to your Express application",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nbonneau/express-voter"
+    },
     "keywords": [
         "user",
         "voter",
