@@ -1,0 +1,9 @@
+{
+  "name": "express-voter",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "async": "^2.6.0",
+    "debug": "~2.6.0"
+  }
+}
