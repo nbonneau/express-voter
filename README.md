@@ -74,8 +74,9 @@ app.get('/:subject', expressVoter.validate('view', subjectGetter), function(req,
 
 ## Voter configuration
 
+
 | Key | Type | Required | Default | Description |
-| --- | ---- | -------- | ----------- |
+| --- | --- | --- | --- | --- |
 | name| string | no | 'voter_${index}' | The voter name |
 | roles | array\<string\> | yes |  | An array of roles for the voter |
 | supports | function | yes |  | The supports function to know if the voter supports role and subject. Must return true if role and subject are supported by the voter. Pass two arguments, the role and the subject to check |
@@ -87,12 +88,13 @@ app.get('/:subject', expressVoter.validate('view', subjectGetter), function(req,
 ```js
 app.use(expressVoter({
     // ...
+    requestUserKey: 'user'
 }));
 ```
 
-|Key|Type|Required|Default|Description|
-|---|----|--------|-----------|
-|onNoVoters|function|no||A function to handle on no voters found|
-|onNoUser|function|no||A function to handle on user is not found from "request.${requestUserKey}"|
-|formatError|function|no|function(){...}|A function to format error on voters not valid|
-|requestUserKey|string|no|'user'|The request user key to find current user|
+| Key | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| onNoVoters | function | no |  | A function to handle on no voters found |
+| onNoUser | function | no |  | A function to handle on user is not found from "request.${requestUserKey}" |
+| formatError | function | no | function(){...} | A function to format error on voters not valid |
+| requestUserKey | string | no | 'user' | The request user key to find current user |
