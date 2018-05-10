@@ -1,9 +1,22 @@
 {
-  "name": "express-voter",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "async": "^2.6.0",
-    "debug": "~2.6.0"
-  }
+    "name": "express-voter",
+    "description": "Add voters to your Express application",
+    "keywords": [
+        "user",
+        "voter",
+        "access",
+        "role",
+        "express",
+        "middleware"
+    ],
+    "version": "1.0.0",
+    "author": {
+        "email": "nicolas.bonneau.vlb@gmail.com",
+        "name": "Nicolas BONNEAU"
+    },
+    "dependencies": {
+        "async": "^2.6.0",
+        "debug": "~2.6.0"
+    },
+    "license": "MIT"
 }

@@ -8,6 +8,8 @@ npm i --save express-voter
 
 ## How to use
 
+Before use validation from request or from middleware, you have to implement your system user management, for example with `passport`.
+
 1. Add voters
 ```js
 // app.js
